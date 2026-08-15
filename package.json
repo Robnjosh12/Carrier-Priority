@@ -1,0 +1,49 @@
+{
+  "name": "carrier-priority",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Carrier Priority — the freight SaaS platform brokers don't want carriers to have. The broker is no longer necessary.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server/index.js",
+    "server:dev": "node --watch server/index.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "node server/db/seed.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.632.0",
+    "@aws-sdk/s3-request-presigner": "^3.632.0",
+    "axios": "^1.7.4",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.32.1",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "expo-server-sdk": "^3.10.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.14",
+    "pg": "^8.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "stripe": "^16.8.0",
+    "twilio": "^5.2.3",
+    "ws": "^8.18.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "drizzle-kit": "^0.24.0",
+    "vite": "^5.4.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
