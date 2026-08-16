@@ -2,6 +2,7 @@ services:
   - type: web
     name: carrier-priority-api
     env: docker
+    plan: free
     dockerfilePath: ./Dockerfile
     healthCheckPath: /health
     envVars:
@@ -19,6 +20,7 @@ services:
   - type: web
     name: carrier-priority-frontend
     env: static
+    plan: free
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
     envVars:
@@ -27,5 +29,5 @@ services:
 
 databases:
   - name: carrier-priority-db
-    plan: starter
+    plan: free
     postgresMajorVersion: 16
