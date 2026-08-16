@@ -19,8 +19,7 @@ services:
 
   - type: web
     name: carrier-priority-frontend
-    env: static
-    plan: free
+    env: static 
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
     envVars:
