@@ -2,12 +2,12 @@ services:
   - type: web
     name: carrier-priority-api
     env: docker
-    plan: free
+    plan: free 
     dockerfilePath: ./Dockerfile
     healthCheckPath: /health
     envVars:
       - key: NODE_ENV
-        value: production
+      value: production  
       - key: DATABASE_URL
         fromDatabase:
           name: carrier-priority-db
@@ -22,9 +22,6 @@ services:
     env: static 
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
-    envVars:
-      - key: NODE_ENV
-        value: production
 
 databases:
   - name: carrier-priority-db
