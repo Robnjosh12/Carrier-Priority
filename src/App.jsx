@@ -1,5 +1,5 @@
 /**
- * ROAD LEDGER — Full-Stack Load Board Platform
+ * CARRIER PRIORITY — Full-Stack Load Board Platform
  * =============================================
  * Complete production application for owner-operators and fleets.
  * This file is the full React frontend. See /server for backend.
@@ -337,7 +337,7 @@ function AuthScreen({ onLogin }) {
             <i className="ti ti-truck" style={{ fontSize:20, color:"#000" }} aria-hidden />
           </div>
           <div>
-            <div style={{ fontSize:20, fontWeight:900, color:T.text, fontFamily:"Georgia,serif", letterSpacing:"-0.03em" }}>Road Ledger</div>
+            <div style={{ fontSize:20, fontWeight:900, color:T.text, fontFamily:"Georgia,serif", letterSpacing:"-0.03em" }}>CARRIER PRIORITY</div>
             <div style={{ fontSize:10, color:T.gold, fontWeight:800, letterSpacing:"0.12em", textTransform:"uppercase" }}>Full-Stack Load Platform</div>
           </div>
         </div>
@@ -345,7 +345,7 @@ function AuthScreen({ onLogin }) {
           The broker is<br /><span style={{ color:T.gold }}>no longer necessary.</span>
         </h1>
         <p style={{ color:T.muted, fontSize:15, lineHeight:1.7, margin:"0 0 36px" }}>
-          Road Ledger gives owner-operators and fleets every tool to find loads, manage documents, track payments, and stay compliant — without giving 15% to a middleman.
+          CARRIER PRIORITY gives owner-operators and fleets every tool to find loads, manage documents, track payments, and stay compliant — without giving 15% to a middleman.
         </p>
         <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
           {["Profit-first load scoring","Digital rate confirmations & e-sign","Real-time ELD tracking","Automated invoice & Quick Pay","FMCSA compliance monitoring","Shipper verification & grading"].map(f=>(
@@ -356,7 +356,7 @@ function AuthScreen({ onLogin }) {
         </div>
         <div style={{ marginTop:40, padding:"14px 18px", background:T.card, borderRadius:10, border:`0.5px solid ${T.border}` }}>
           <div style={{ fontSize:12, color:T.gold, fontWeight:700, marginBottom:4 }}>Built from the road up</div>
-          <div style={{ fontSize:12, color:T.muted, lineHeight:1.6 }}>"Before Road Ledger I was calling brokers all day just to find loads that paid $1.85/mile. Now I'm consistently finding dry van loads at $2.54–$2.61 and getting paid in 48 hours." — Marcus T., Owner-Operator, Columbus OH</div>
+          <div style={{ fontSize:12, color:T.muted, lineHeight:1.6 }}>"Before CARRIER PRIORITY I was calling brokers all day just to find loads that paid $1.85/mile. Now I'm consistently finding dry van loads at $2.54–$2.61 and getting paid in 48 hours." — Marcus T., Owner-Operator, Columbus OH</div>
         </div>
       </div>
 
@@ -417,7 +417,7 @@ function AuthScreen({ onLogin }) {
               </>}
 
               {step===2&&<>
-                <Alert type="info" msg="Road Ledger verifies your MC authority and DOT number against FMCSA's SAFER database to protect shippers and maintain platform integrity." />
+                <Alert type="info" msg="CARRIER PRIORITY verifies your MC authority and DOT number against FMCSA's SAFER database to protect shippers and maintain platform integrity." />
                 <Input label="MC Number" placeholder="MC-847291" {...field("mc")} />
                 <Input label="DOT Number (optional)" placeholder="DOT-3841029" {...field("dot")} />
                 <div style={{ fontSize:11, color:T.muted, marginTop:-4, marginBottom:12 }}>
@@ -451,7 +451,7 @@ function AuthScreen({ onLogin }) {
               <Btn variant="primary" onClick={submit} disabled={loading} fullWidth>
                 {loading?<><i className="ti ti-loader" aria-hidden /> {step===2?"Verifying with FMCSA…":"Processing…"}</>:
                   step<3?<>Continue <i className="ti ti-arrow-right" aria-hidden /></>:
-                  <><i className="ti ti-rocket" aria-hidden /> Launch Road Ledger</>}
+                  <><i className="ti ti-rocket" aria-hidden /> Launch CARRIER PRIORITY</>}
               </Btn>
             </div>
           )}
@@ -1651,7 +1651,7 @@ function MobileDriver() {
             <i className="ti ti-truck" style={{ fontSize:16, color:T.gold }} aria-hidden />
           </div>
           <div>
-            <div style={{ fontSize:14, fontWeight:900, color:"#000", fontFamily:"Georgia,serif" }}>Road Ledger</div>
+            <div style={{ fontSize:14, fontWeight:900, color:"#000", fontFamily:"Georgia,serif" }}>CARRIER PRIORITY</div>
             <div style={{ fontSize:10, color:"#00000099" }}>Driver App · {drv.name}</div>
           </div>
         </div>
@@ -2119,7 +2119,7 @@ export default function App() {
 
   return (
     <div style={{ background:T.bg, minHeight:"100vh", fontFamily:"'Georgia', serif", display:"flex", flexDirection:"column" }}>
-      <h2 className="sr-only">Road Ledger full-stack freight management platform</h2>
+      <h2 className="sr-only">CARRIER PRIORITY full-stack freight management platform</h2>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js" />
 
       {/* Top Nav */}
