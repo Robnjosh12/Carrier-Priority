@@ -333,7 +333,7 @@ export const NotifyService = {
    */
   async email(to, subject, html) {
     try {
-      await mailer.sendMail({ from: ENV.EMAIL_FROM || "dispatch@roadledger.com", to, subject, html });
+      await mailer.sendMail({ from: ENV.EMAIL_FROM || "dispatch@carrierpriority.com", to, subject, html });
     } catch (e) {
       console.error("[notify] Email error:", e.message);
     }
