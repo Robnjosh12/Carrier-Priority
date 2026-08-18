@@ -1476,7 +1476,7 @@ function ShipperPortal() {
   return (
     <div>
       <SectionTitle title="Shipper Portal" sub="Post loads, verify carriers, sign rate confirmations, release payments" />
-      <Alert type="info" msg="Shippers get their own login at shippers.Carrierpriority .com — no broker needed. They post loads, choose a carrier, e-sign the rate confirmation, and release payment all in one place." />
+      <Alert type="info" msg="Shippers get their own login at shippers.Carrierpriority.com — no broker needed. They post loads, choose a carrier, e-sign the rate confirmation, and release payment all in one place." />
       <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:16 }}>
         <Card>
           <CardHeader title="Post a Load" sub="Direct to verified carriers" />
