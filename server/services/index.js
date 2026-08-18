@@ -1,5 +1,5 @@
 /**
- * ROAD LEDGER — Backend Services
+ * Carrier Priority — Backend Services
  * ================================
  * All production service modules in one file for clarity.
  * In production, split each export into its own file under server/services/
@@ -305,7 +305,7 @@ export const NotifyService = {
       await twilioClient.messages.create({
         to,
         from: ENV.TWILIO_FROM,
-        body: `[Road Ledger] ${body}`,
+        body: `[Carrier Priority] ${body}`,
       });
     } catch (e) {
       console.error("[notify] SMS error:", e.message);
@@ -349,19 +349,19 @@ export const NotifyService = {
   async offerReceived(user, offer, load) {
     const msg = `Offer received on ${load.originCity}→${load.destCity}: $${offer.offeredRate}`;
     await this.sms(user.phone, msg);
-    await this.email(user.email, "New Offer — Road Ledger", `<p>${msg}</p>`);
+    await this.email(user.email, "New Offer — Carrier Priority", `<p>${msg}</p>`);
   },
 
   async invoicePaid(user, invoice) {
     const msg = `Payment received: INV-${invoice.invoiceNumber} — $${invoice.paidAmount} via ACH`;
     await this.sms(user.phone, msg);
-    await this.email(user.email, "Payment Received — Road Ledger", `<p>${msg}</p>`);
+    await this.email(user.email, "Payment Received — Carrier Priority", `<p>${msg}</p>`);
   },
 
   async complianceExpiring(user, item) {
     const msg = `Compliance alert: ${item.name} expires ${item.expiresAt?.toLocaleDateString()}`;
     await this.sms(user.phone, msg);
-    await this.email(user.email, "Compliance Expiring — Road Ledger", `<p>${msg}</p>`);
+    await this.email(user.email, "Compliance Expiring — Carrier Priority", `<p>${msg}</p>`);
   },
 
   async hosViolationAlert(data) {
